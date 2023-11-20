@@ -1,6 +1,6 @@
 // hrere using string methods
 // create a variable to store the string value
-
+// let mean initialize the variable
 let v = "Mahendrakumar";
 console.log(v) // Output: Mahendrakumar  // here using console for print the value to display browsers console
  // here using length property for length of the string
