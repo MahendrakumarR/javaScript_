@@ -28,5 +28,5 @@ console.log(Math.random()) // output : 0.28802700339256226 // any random value v
 console.log(Math.floor(Math.random()*10)+1) // output : 1 to 10 random number ( here using '+1' because the values(0-9) ten values i want (1-10) so using '+1") 
 // floor used for whole value from '1' then '10' for '10'values '+1' for not '0'
 
-const a = "Mahen";
+const a = "Mahendran";
 console.log(a.charAt(Math.floor(Math.random()*a.length))) // output : Mahendran random value
