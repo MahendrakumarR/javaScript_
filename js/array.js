@@ -48,18 +48,57 @@ console.log(lastItem_1);                   // output : not
 
 console.log(myArray_2)                   // output : Array(5) [ 1, "Hello", "Welcome", 6, "not" ]
 
-// incase i want delete in between value so use this
+// incase you want delete in between value so use this
 
-const newArray = ["a", 5, "b", 8, "c"];   // new array 
-newArray.splice(2,1);                    // here '2' is starting position and '1' is how many items delete
-console.log(newArray)                   // output : Array(4) [ "a", 5, 8, "c" ]
-
-
-newArray.splice(2,1,"Hello");        // here '2' is starting position and '0' is add new item inside the array
-console.log(newArray)               // output : Array(4) [ "a", 5, 8, "c" ]
+// splice
+const newArray = ["a", 5, "b", 8, "c"];    // new array 
+newArray.splice(2, 1);                    // here '2' is starting position and '1' is how many items delete
+console.log(newArray)                    // output : Array(4) [ "a", 5, 8, "c" ]
 
 
+newArray.splice(2, 0, "Hello");        // here '2' is starting position and '0' is add new item inside the array                                                                                                                                                                                                                                                                                                                                                              
+console.log(newArray)                 // output : Array(5) [ "a", 5, "Hello", 8, "c" ]
 
+newArray.splice(2, 1, "new");          // here '2' is starting position and '1' is how many items // then 'new' replace 'Hello'                                                                                                                                                                                                                                                                                                                                                               
+console.log(newArray)                 // output : Array(4) [ "a", 5, "new", "c" ]
 
+// reverse
+const reverseArray = [1,2,3,4,5,6,7,8,9];   // new array created
+const re = reverseArray.reverse();                    // here using 'reverse' method for reverse order of the array 
+console.log(re);                // output : Array(9) [ 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
 
+// join
+const joinArray = ['A','B','C','D','E'];    // new array created
+const my = joinArray.join();               // here using 'join' method for no quotations 
+console.log(my);                          // output : A,B,C,D,E    // this are single string
 
+// split         // The above code is commbained so now split indiviual
+const splitArray = ['A','B','C','D','E'];   // new array created
+const sp = splitArray.join().split(",");   // here using 'split' method for split the value each by each
+console.log(splitArray);                  // output : Array(5) [ "A", "B", "C", "D", "E" ]  
+
+// concat        // Joining to arrays
+const oneArray = ['A','B','C','D','E'];       // new array created
+const secondArray = ['F','G','H','I','J'];   // new array created
+const con = oneArray.concat(secondArray);   // here using 'concat' method for add two arrays
+console.log(con);  
+
+//or    // same as the above code               // Joining to arrays
+
+const con_1 = [...oneArray,...secondArray];   // here using 'concat' method for add two arrays
+console.log(con_1); 
+
+// ================ Two Dimensotional Array ===========================
+const a = [1,2,3,4,5,6,7,8,9,0];
+const b = ["a", "b", "c", "d"];
+const c = [23, "e", "f", 11];
+
+const v = [a,b];               // here 'v' is array they store two arrays inside the v  
+
+console.log(v[0][1]);          // output : 2
+
+// ================ Three Dimensotional Array =========================
+
+const v_1 = [a,b,c];               // here 'v' is array they store two arrays inside the v  
+
+console.log(v_1[2][1]);          // output : e
