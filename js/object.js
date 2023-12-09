@@ -46,7 +46,7 @@ const old = {           //  this is an object i created first
     banana : "yellow",
     orange : "orange"
 }
-console.log(old.apple)                     // output : red
+console.log(old.apple)                          // output : red
 
 // here inherit the above object (old)
 
@@ -57,6 +57,53 @@ few.carrot = "green";                    // here add values inside the 'few' obj
 console.log(few);                       // output : Object { carrot: "green" }
 console.log(few.orange);               // output : orange // because inherit the object 'old'
 
+// Another Method
+
+const movie = {
+    artist : "Mahendran",
+    music : "Arr",
+    direct : "logesh",
+    camera : "john",
+    singer : "omi"
+}
+                                        // here only print keys 
+console.log(Object.keys(movie));       // output : Array(4) [ "artist", "music", "direct", "camera", "singer" ]
+                                      // here only print values
+console.log(Object.values(movie));   // output : Array(4) [ "Mahendran", "Arr", "logesh", "john", "omi" ]
+
+delete movie.singer;               // here delete the 'singer' value from the object
+
+
+// ================ for in =======================
+
+for(let i in movie){
+    console.log(movie[i]);  // output : Mahendran, Arr, logesh, john
+}
+
+// or 
+
+for(let i in movie){
+    console.log(`${i}, it's a ${movie[i]}`);  // output : 'artist, it's a Mahendran', 'music, it's a Arr', 'direct, it's a logesh', 'camera, it's a john'
+}
+
+
+// ============ destructuring the object ========================
+
+const movie1 = {
+    artist : "kumar",
+    music : "Ani",
+    direct : "logi",
+    camera : "meg",
+}
+
+// here using variable to store the values of object
+
+const { music : storeValue } = movie1; // here 'storeValue' used to store the music value of 'Ani'
+console.log(storeValue);              // output : Ani
+
+//or
+const {artist,music,direct,camera} = movie1; // here 'storeValue' used to store the music value of 'Ani'
+console.log(artist);                        // output : kumar
 
 
 
