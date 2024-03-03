@@ -25,20 +25,17 @@ h2.addEventListener("click",
 // The below code use for serever load or not i want the proccess is over or not 
 
 document.addEventListener
-    ("readystatechange",(event)=>{
+    ("readystatechange",(event)=>{                   // using for reload the server
         if(event.target.readyState === "complete"){
             console.log("complete");
-            App();
-        }
+            initApp();                              // first initialize then use below lines
+        }            
 
     }
 )
 
-// output : complete
 
-
-
-const App = () =>{
+const initApp = () =>{
     const view = document.querySelector("#view2");
     const div = view.querySelector("div");
     const h2 = div.querySelector("h2");
