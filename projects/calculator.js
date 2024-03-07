@@ -14,3 +14,8 @@ function calculate() {
 function clearText() {
     document.getElementById('txt').value = '';
 }
+function deleteLast() {
+    var currentText = document.getElementById('txt').value;
+    document.getElementById('txt').value = currentText.slice(0, -1);
+}
+
