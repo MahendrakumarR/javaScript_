@@ -20,16 +20,6 @@ document.getElementById('next-right').addEventListener('click', function(e) {
     navigate(1);
 });
 
-document.getElementById('prev-right').addEventListener('click', function(e) {
-    e.stopPropagation();
-    navigate(-1); // Navigate to the previous image
-});
-
-document.getElementById('next-left').addEventListener('click', function(e) {
-    e.stopPropagation();
-    navigate(1); // Navigate to the next image
-});
-
 document.getElementById('overlay').addEventListener('click', function(e) {
     if (e.target.id === 'overlay') {
         closeImage();
