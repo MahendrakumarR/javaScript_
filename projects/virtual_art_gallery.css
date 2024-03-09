@@ -1,0 +1,90 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artwork {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.artwork img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.artwork img:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close-button:hover {
+    opacity: 0.7;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#prev-left {
+    left: 10px;
+}
+
+#next-right {
+    right: 10px;
+}
+
+#prev-right {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+#next-left {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+
