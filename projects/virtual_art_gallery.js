@@ -5,6 +5,7 @@ artworks.forEach(function(artwork, index) {
     artwork.addEventListener('click', function() {
         currentIndex = index;
         openImage(artwork.querySelector('img').src);
+
     });
 });
 
@@ -68,5 +69,39 @@ function updateNavigationButtons() {
     } else if (currentIndex === artworks.length - 1) {
         nextRightButton.style.display = 'none';
         nextLeftButton.style.display = 'none';
+    }
+        
+}
+// Add event listeners for buttons
+document.getElementById('add-image-btn').addEventListener('click', addImage);
+document.getElementById('delete-image-btn').addEventListener('click', deleteImage);
+
+// Function to add an image
+function addImage() {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = function(event) {
+        var file = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function() {
+            var newArtwork = document.createElement('div');
+            newArtwork.classList.add('artwork');
+            newArtwork.innerHTML = '<img src="' + reader.result + '" alt="New Artwork">';
+            document.querySelector('.gallery').appendChild(newArtwork);
+            artworks = document.querySelectorAll('.artwork');
+            attachArtworkListeners();
+        };
+        reader.readAsDataURL(file);
+    };
+    input.click();
+}
+
+// Function to delete an image
+function deleteImage() {
+    if (currentIndex >= 0 && currentIndex < artworks.length) {
+        artworks[currentIndex].remove();
+        artworks = document.querySelectorAll('.artwork');
+        updateNavigationButtons();
     }
 }

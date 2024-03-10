@@ -1,6 +1,32 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+#add-image-btn, #delete-image-btn {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-image-btn:hover, #delete-image-btn:hover {
+    background-color: #0056b3;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(173, 236, 131);
+    border: 2px solid red;
+    border-radius: 20px;
 }
 
 .artwork {
@@ -9,14 +35,25 @@
 }
 
 .artwork img {
-    width: 200px;
-    height: auto;
+    width: 275px;
+    height: 330px;
     transition: transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(26, 24, 25, 0.8);
+    border-radius: 10px;
+}
+.artwork video {
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(26, 24, 25, 0.8);
+    border-radius: 10px;
 }
 
 .artwork img:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
+.artwork video:hover {
+    transform: scale(0.9);
+}
+
 
 .overlay {
     display: none;
